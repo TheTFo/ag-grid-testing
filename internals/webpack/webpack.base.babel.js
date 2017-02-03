@@ -24,7 +24,6 @@ module.exports = (options) => ({
       // they will be a part of our compilation either way.
       // So, no need for ExtractTextPlugin here.
       test: /\.css$/,
-      include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -77,6 +76,9 @@ module.exports = (options) => ({
     new webpack.NamedModulesPlugin(),
   ]),
   resolve: {
+    alias: {
+      'ag-grid-root': path.resolve(process.cwd(), 'node_modules/ag-grid'),
+    },
     modules: ['app', 'node_modules'],
     extensions: [
       '.js',
