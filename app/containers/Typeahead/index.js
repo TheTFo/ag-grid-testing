@@ -52,7 +52,7 @@ export class TypeaheadHeaderPage extends React.PureComponent { // eslint-disable
         field: 'City',
         cellEditorFramework: TypeaheadCellEditor,
         cellEditorParams: {
-          values: gridData.map((d) => d.City),
+          values: gridData.map((d) => d.City).filter((val, index, t) => t.indexOf(val) === index),
         },
         editable: true,
       },

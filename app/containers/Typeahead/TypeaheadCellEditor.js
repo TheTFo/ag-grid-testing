@@ -40,6 +40,7 @@ export default class TypeaheadCellEditor extends React.Component {
         maxVisible={5}
         inputProps={{ style: inputStyle }}
         options={this.props.values}
+        filterOption={(inputValue, option) => option.startsWith(inputValue)}
       />
     );
   }
