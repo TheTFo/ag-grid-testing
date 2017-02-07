@@ -46,8 +46,7 @@ export default function createRoutes(store) {
           .then(loadModule(cb))
           .catch(errorLoading);
       },
-    }, 
-    {
+    }, {
       path: '/typeahead',
       name: 'typeahead',
       getComponent(nextState, cb) {
@@ -56,6 +55,14 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     },{
+      path: '/validation',
+      name: 'validation',
+      getComponent(nextState, cb) {
+        import('containers/Validation')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },{    
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

@@ -25,6 +25,9 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <HeaderLink to="/typeahead">
             Typeahead
           </HeaderLink>
+          <HeaderLink to="/validation">
+            Validation
+          </HeaderLink>
         </NavBar>
       </div>
     );
