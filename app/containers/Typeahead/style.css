@@ -1,0 +1,15 @@
+div.grid {
+    height: 500px;
+}
+
+.ta-input {
+    background-color: white;
+}
+
+.ta-results {
+    background-color: white;
+    list-style: none;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 0;
+}

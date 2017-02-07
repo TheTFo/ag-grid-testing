@@ -46,7 +46,16 @@ export default function createRoutes(store) {
           .then(loadModule(cb))
           .catch(errorLoading);
       },
-    }, {
+    }, 
+    {
+      path: '/typeahead',
+      name: 'typeahead',
+      getComponent(nextState, cb) {
+        import('containers/Typeahead')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },{
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
